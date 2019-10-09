@@ -12,7 +12,8 @@ namespace ConsoleApplication1
         {
             Console.WriteLine(IsLower('z'));
             Console.WriteLine(IsUpper('Z'));
-            
+            Console.WriteLine(ToUpper('b'));
+            Console.WriteLine(ToLower('B'));
             Print_a_2_z_v1();
             Print_a_2_z_v2();
             Print_a_2_z_v3();
@@ -79,10 +80,16 @@ namespace ConsoleApplication1
         }
         public static char ToUpper(char c)
         {
+            int a = Char2code(c);
+            a = a - 32;
+            c = (char)a;
             return c;
         }
         public static char ToLower(char c)
         {
+            int a = Char2code(c);
+            a = a + 32;
+            c = (char)a;
             return c;
         }
         
