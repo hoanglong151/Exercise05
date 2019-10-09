@@ -12,7 +12,7 @@ namespace ConsoleApplication1
         {
             Console.WriteLine(IsLower('z'));
             Console.WriteLine(IsUpper('Z'));
-            Console.WriteLine(ToUpper(c));
+            
             Print_a_2_z_v1();
             Print_a_2_z_v2();
             Print_a_2_z_v3();
