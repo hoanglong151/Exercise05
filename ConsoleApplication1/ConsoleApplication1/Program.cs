@@ -10,17 +10,19 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(IsLower('f'));
+            Console.WriteLine(IsLower('z'));
+            Console.WriteLine(IsUpper('Z'));
+            Console.WriteLine(ToUpper(c));
             Print_a_2_z_v1();
             Print_a_2_z_v2();
             Print_a_2_z_v3();
             {
                 while(true)
                 {
-            char c = Console.ReadKey().KeyChar;
-            Console.WriteLine(Char2code(c));
+                    char c = Console.ReadKey().KeyChar;
+                    Console.WriteLine(Char2code(c));
                 }   
-        }
+            }
             
             
         }
@@ -56,18 +58,23 @@ namespace ConsoleApplication1
         {
             return (int)c;
         }
-        public static bool IsLower(char c)
+        public static bool IsUpper(char c)
         {
             
             for (int i = 65; i <= 90; i++)
             {
-                if(Char2code == c[i])
-                return true;
+                if(Char2code(c) == i)
+                   return true;
             }
             return false;
         }
-        public static bool IsUpper(char c)
+        public static bool IsLower(char c)
         {
+            for (int i = 97; i <= 122; i++)
+            {
+                if (Char2code(c) == i)
+                    return true;
+            }
             return false;
         }
         public static char ToUpper(char c)
